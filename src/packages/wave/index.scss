@@ -1,0 +1,12 @@
+.wave-animation {
+  animation: animations 0.4s ease-in-out forwards;
+}
+
+@keyframes animations {
+  50% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 1;
+  }
+}
