@@ -4,11 +4,33 @@
   align-items: center;
   outline: none;
   background-color: #fff;
-  border: 1px black solid;
-  padding: 10px 20px;
+  border: 1px #aaaaaa solid;
   border-radius: 10px;
   cursor: pointer;
+  height: 100%;
+  padding: 0 10px;
   transition: all .3s cubic-bezier(.645, .045, .355, 1);
+
+  &:focus {
+    border: cornflowerblue 1px solid;
+    color: cornflowerblue;
+  }
+
+  &:hover {
+    border: cornflowerblue 1px solid;
+    color: cornflowerblue;
+  }
+
+  &:disabled {
+    pointer-events: none;
+    cursor: not-allowed;
+    border-color: #cfcfcf;
+  }
+
+  &.active {
+    border: cornflowerblue 1px solid;
+    color: cornflowerblue;
+  }
 
   &.primary {
     background-color: cornflowerblue;
@@ -17,7 +39,7 @@
   }
 
   .loading {
-      animation: spin 1s linear infinite;
+    animation: spin 1s linear infinite;
   }
 }
 

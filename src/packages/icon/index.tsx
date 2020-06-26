@@ -9,10 +9,10 @@ export interface IconProps {
   className?: string
 }
 
-const Icon: React.FunctionComponent<IconProps> = props => {
+const Icon: React.FunctionComponent<IconProps> = ({name, className}) => {
   return (
-    <svg className={classes('icon', props.className)} aria-hidden="true">
-      <use xlinkHref="#i-loading"/>
+    <svg className={classes('icon', className)} aria-hidden="true">
+      <use xlinkHref={`#i-${name}`}/>
     </svg>
   )
 };
